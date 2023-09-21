@@ -24,9 +24,9 @@
         <p class="info">* 표시는 필수 입력란 입니다.</p>
         <div class="id">
           <label for="_id"><span>*</span> 아이디</label>
-
           <input id="_id" name="_id" type="text" />
-          <button>중복확인</button>
+          <!-- req -->
+          <button type="button" onclick="id_check();">중복확인</button>
         </div>
 
         <div class="password">
@@ -34,9 +34,8 @@
           <input
             id="_pw"
             type="password"
-            placeholder="비밀번호 8자리 이상 입력하세요"
+            placeholder="영문자+숫자+특수문자 조합 8 ~ 25자리 입력"
           />
-          <div id="_pwError" class="error"></div>
         </div>
 
         <div class="passwordCheck">
@@ -46,30 +45,25 @@
             type="password"
             placeholder="비밀번호를 다시 입력해 주세요."
           />
-          <div id="_pwCheckError" class="error"></div>
         </div>
 
         <div class="name">
           <label for="_name"><span>*</span> 이름</label>
           <input id="_name" type="text" />
-          <div id="_nameError" class="error"></div>
         </div>
 
         <div class="phone">
           <label for="_hp"><span>*</span> 연락처</label>
-          <input id="_hp" type="text" placeholder="000-0000-0000" />
+          <input id="_hp" type="tel" placeholder="- 없이 숫자만 입력하세요." />
         </div>
 
         <div class="email">
           <label for="_email">이메일</label>
           <input id="_email" type="text" />
-          <div id="_emailError" class="error"></div>
         </div>
 
         <div class="signUp">
-          <button id="signUpBtn" disabled onclick="signUpCheck()">
-            회원가입
-          </button>
+          <button type="button" onclick="joinform_check();">회원가입</button>
         </div>
       </form>
     </div>
