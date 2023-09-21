@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-size: 40px;
+}
+
+body {
+  background-color: black;
+}
+
+
+#container {
+  /* border: 1px solid #fff; */
+  width: 1500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#header a {
+  color: white;
+  font-size: 50px;
+  display: block;
+}
+
+#login {
+  /* border: 1px solid #fff; */
+  margin: 0 auto;
+  width: 50%;
+}
+
+#login p {
+  color: #fff;
+}
+
+#login p:nth-of-type(1) {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+#login p:nth-of-type(2) {
+  text-align: right;
+  text-decoration: underline;
+  color: grey;
+}
+
+
+#login #id {
+  width: 100%;
+  color: grey;
+  display: block;
+  margin-bottom: 40px;
+  padding: 20px 5px;
+  border: none;
+  border-bottom: 4px solid #ddd;
+  background-color: #000;
+}
+
+#login #pw {
+  width: 100%;
+  color: grey;
+  display: block;
+  margin-bottom: 40px;
+  padding: 20px 5px;
+  border: none;
+  border-bottom: 4px solid #ddd;
+  background-color: #000;
+}
+
+#login button a {
+  color: #fff;
+}
+
+#login button {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+#login button:nth-of-type(1) {
+  background-color: red;
+  padding: 20px 0;
+  margin-bottom: 35px;
+}
+
+#login button:nth-of-type(2) {
+  background-color: rgb(64, 62, 62);
+  padding: 20px 0;
+}
