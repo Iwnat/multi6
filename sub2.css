@@ -1,0 +1,109 @@
+/* 전체 페이지 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* 컨테이너 스타일 */
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 헤더 스타일 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* 로고 스타일 */
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+}
+
+/* 로그아웃 및 마이페이지 버튼 스타일 */
+#logout, #mypage {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#menu nav ul {
+  list-style-type: none;
+  padding: 10;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+}
+
+#menu nav ul li:hover a h3 {
+  color: red;
+}
+
+#menu nav ul li h3 {
+  margin-right: 105px;
+  color: gray;
+}
+
+#menu nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* 제목 및 검색 버튼 스타일 */
+h2 {
+  font-size: 24px;
+}
+
+button {
+  background-color: gray;
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* 영화 정보 스타일 */
+#content {
+  padding: 20px 0;
+  border: 1px solid gray;
+  background-color: rgb(77, 75, 75);
+}
+
+#movieNm {
+  font-weight: bold;
+}
+
+#director, #peopleNm {
+  margin-top: 5px;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title h2 {
+  margin-right: 40px;
+  color: red;
+}
+
+#title button {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
