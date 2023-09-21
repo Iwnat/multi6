@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 전체 페이지 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+#wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+/* 로고 */
+#wrap #header {
+  font-size: 30px;
+  color: red;
+
+  margin: 50px;
+  padding-left: 10px;
+  border-bottom: 1px solid #383838;
+}
+
+
+/* 타이틀 */
+#wrap .title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  color: red;
+}
+
+/* join 작성부분 */
+#wrap #join {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px;
+  color: white;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #b8b8b8;
+}
+
+
+#wrap #join .info {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  color: #b8b8b8;
+}
+
+#wrap #join div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#wrap #join .id {
+  margin-bottom: 30px;
+}
+
+#wrap #join .phone {
+  margin-bottom: 30px;
+}
+
+#wrap #join label {
+  display: inline-block;
+  flex: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#wrap #join input {
+  display: inline-block;
+  flex: right;
+  width: 60%;
+
+  background-color: #fff;
+  border-radius: 3px;
+  line-height: 40px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+#wrap #join .id button {
+  width: 90px;
+  height: 40px;
+  border-radius: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  background: rgb(75, 75, 75);
+  color: white;
+}
+
+.signUp button {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  background: red;
+  color: white;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.signUp button:hover {
+  background: yellow;
+  color: black;
+}
+
+.error {
+  font-size: 1px;
+  height: 20px;
+  color: red;
+}

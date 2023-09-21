@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="admin.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap" class="wrapper">
+      <!-- 로고 -->
+      <header>
+        <div id="header">
+          <h1 class="logo"><a href="main1.html">로고</a></h1>
+        </div>
+      </header>
+
+      <div class="title"><h2>회원가입</h2></div>
+
+      <form id="join" name="join" method="post">
+        <!-- join 작성부분 -->
+        <p class="info">* 표시는 필수 입력란 입니다.</p>
+        <div class="id">
+          <label for="_id"><span>*</span> 아이디</label>
+
+          <input id="_id" name="_id" type="text" />
+          <button>중복확인</button>
+        </div>
+
+        <div class="password">
+          <label for="_pw"><span>*</span> 비밀번호</label>
+          <input
+            id="_pw"
+            type="password"
+            placeholder="비밀번호 8자리 이상 입력하세요"
+          />
+          <div id="_pwError" class="error"></div>
+        </div>
+
+        <div class="passwordCheck">
+          <label for="_pwCheck"><span>*</span> 비밀번호 확인</label>
+          <input
+            id="_pwCheck"
+            type="password"
+            placeholder="비밀번호를 다시 입력해 주세요."
+          />
+          <div id="_pwCheckError" class="error"></div>
+        </div>
+
+        <div class="name">
+          <label for="_name"><span>*</span> 이름</label>
+          <input id="_name" type="text" />
+          <div id="_nameError" class="error"></div>
+        </div>
+
+        <div class="phone">
+          <label for="_hp"><span>*</span> 연락처</label>
+          <input id="_hp" type="text" placeholder="000-0000-0000" />
+        </div>
+
+        <div class="email">
+          <label for="_email">이메일</label>
+          <input id="_email" type="text" />
+          <div id="_emailError" class="error"></div>
+        </div>
+
+        <div class="signUp">
+          <button id="signUpBtn" disabled onclick="signUpCheck()">
+            회원가입
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
