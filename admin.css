@@ -40,13 +40,17 @@ a {
 
 /* join 작성부분 */
 #wrap #join {
-  width: 60%;
+  width: 800px;
   margin: 0 auto;
   padding: 50px;
   color: white;
   border: 1px solid #eee;
   border-radius: 20px;
-  box-shadow: 5px 5px 20px #b8b8b8;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+span {
+  color: red;
 }
 
 
@@ -59,17 +63,9 @@ a {
 }
 
 #wrap #join div {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#wrap #join .id {
   margin-bottom: 30px;
 }
 
-#wrap #join .phone {
-  margin-bottom: 30px;
-}
 
 #wrap #join label {
   display: inline-block;
@@ -94,11 +90,19 @@ a {
   padding-right: 10px;
 }
 
+#wrap #join .id {
+  position: relative;
+}
 
 #wrap #join .id button {
+  position: absolute;
+
   width: 90px;
   height: 40px;
+  top: 0;
+  bottom: 0;
   border-radius: 3px;
+
   margin-left: 5px;
   cursor: pointer;
   border: none;
@@ -112,18 +116,12 @@ a {
   font-size: 20px;
   font-weight: 700;
   background: red;
+  border-radius: 30px;
   color: white;
   cursor: pointer;
   margin-top: 50px;
 }
 
 .signUp button:hover {
-  background: yellow;
-  color: black;
-}
-
-.error {
-  font-size: 1px;
-  height: 20px;
-  color: red;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
