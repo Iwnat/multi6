@@ -1,15 +1,4 @@
 
-//API 예제코드. 참고용.
-fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=16aabfb75dea296dfae9b01906442545&targetDt=20230901')
-    .then(response => response.json())
-    .then(data => {
-        // 데이터를 처리하는 코드를 여기에 추가
-        console.log(data); // 가져온 데이터를 콘솔에 출력
-    })
-    .catch(error => {
-        console.error('API 호출 오류:', error);
-    });
-
 // API를 호출하여 영화 정보를 가져오는 함수
 fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=16aabfb75dea296dfae9b01906442545&targetDt=20230901')
     .then(response => response.json()) // API 응답을 JSON 형식으로 변환
@@ -25,9 +14,17 @@ fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxO
             const boxOfficeItem = document.createElement('div'); // 영화 정보를 담을 div 요소 생성
             boxOfficeItem.classList.add('box-office-item'); // CSS 클래스 추가
 
+            // 영화 포스터 이미지를 생성하고 소스 링크를 지정
+            const posterImage = new Image();
+            posterImage.src = getPosterImageUrl(index); // 포스터 이미지의 URL을 얻어옴
+
+            // 포스터 이미지 크기 조절
+            posterImage.width = 400;
+            posterImage.height = 450;
+
             // 영화 정보를 HTML에 삽입
-            boxOfficeItem.innerHTML = `
-                <img src="movie${index + 1}.jpg" alt="영화 포스터" class="box-office-poster">
+            boxOfficeItem.appendChild(posterImage); // 포스터 이미지를 div에 추가
+            boxOfficeItem.innerHTML += `
                 <p>${movie.movieNm}</p>
                 <p>개봉일: ${movie.openDt}</p>
                 <p>누적관객수: ${movie.audiAcc}</p>
@@ -37,7 +34,13 @@ fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxO
             boxOfficeContainer.appendChild(boxOfficeItem);
         });
     })
-    //호출 오류 시
+    // 호출 오류 시
     .catch(error => {
         console.error('API 호출 오류:', error);
     });
+    //포스터 이미지 url을 반환
+    function getPosterImageUrl(index) {
+        if (index === 0) return 'https://i.namu.wiki/i/AYscuugbnggk_YEJNoUmUhA54XpjqN-15pofG4iPMgZ7TshHLwIYAjLHU_FJno3Vl--Hm10DhSP4G-Wi62nSnTHw9le1llD2dV8gaMWsrcSPbwOm_PjPy3pRcsUBNUS3x7Z9gggoC4mVg6I3ajp5jw.webp';
+        else if (index === 1) return 'https://i.namu.wiki/i/yNFrYYz1-t0euokuORmcMoCfcJUVhBFM6vAkSaclEhGgyE6uW05tgQx0J-jTpefStSGV8lS9p6GM8YsCoQuPvQDkwsuQ7JEuUI-wYV5zAVcqUeixQcEEMczOU3fSG7raWz6xONVYT9Gb-XSVAKQ1Qg.webp';
+        else if (index === 2) return 'https://i.namu.wiki/i/C04tZwepetwhxJAHEH79D1Lig6TOsQQqc-d_yiQtBQwqnMUMRGRWPVJDdJDgjzV2Ai_zZT__t2g6CUMvVjh9sQ7HFY66vs9p59GSiBtXSlJqpj3V3L5H70KI1LHJQEXe6AbJO0pqmkefKmGr78hFOw.webp';
+    }
