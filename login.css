@@ -48,7 +48,7 @@ body {
 }
 
 
-#login #id {
+#login #_id {
   width: 100%;
   color: grey;
   display: block;
@@ -59,7 +59,7 @@ body {
   background-color: #000;
 }
 
-#login #pw {
+#login #_pw {
   width: 100%;
   color: grey;
   display: block;
@@ -89,4 +89,30 @@ body {
 #login button:nth-of-type(2) {
   background-color: rgb(64, 62, 62);
   padding: 20px 0;
+}
+
+
+
+.alert1 {
+  color: red;
+  z-index: 1;
+  display: none;
+}
+
+.alert2 {
+  position: relative;
+  bottom: 55px;
+  color: red;
+  z-index: 5;
+  display: none;
+}
+
+
+.alert-id {
+  display: block;
+  z-index: 10;
+}
+
+.alert-pw {
+  display: block;
 }

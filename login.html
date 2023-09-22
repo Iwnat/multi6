@@ -5,23 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login.html</title>
-  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="./style/login.css">
 </head>
 
 <body>
-  <div id="container">
+  <form id="container" action="/login.html" method="post">
     <div id="header">
       <a href="main1.html">로고</a>
     </div>
     <div id="login">
       <p>login</p>
-      <input type="text" placeholder="ID" id="id">
-      <input type="password" placeholder="PW" id="pw">
+      <input class='alert1' type="text" placeholder="ID" id="_id">
+      <input class='alert2' type="password" placeholder="PW" id="_pw">
       <p>ID 찾기 / PW 찾기</p>
-      <button type="submit"><a href="main2.html">로그인</a></button>
+      <button type="submit" id="login-btn"><a href="main2.html">로그인</a></button>
       <button type="submit"><a href="admin.html">회원가입</a></button>
     </div>
-  </div>
+  </form>
+
+  <script src="/login2.js"></script>
 </body>
 
 </html>
