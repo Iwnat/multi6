@@ -1,73 +1,77 @@
 * {
-  box-sizing: border-box;
-  font-size: 40px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: black;
+  width: 100%;
+
 }
 
 a,
 button {
   color: #fff;
   text-decoration: none;
+  font-weight: 700;
 }
 
 
 #container {
-  /* border: 1px solid #fff; */
-  width: 1500px;
   margin: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
 }
 
 #header {
-  /* border: 1px solid #fff; */
-  margin-bottom: 50px;
-  overflow: hidden;
+  height: 150px;
 }
 
 #header .logo {
-  display: block;
-  float: left;
-  font-size: 70px;
-  text-decoration: underline;
+  font-size: 50px;
+  margin-left: 15px;
 }
 
-#header .admin {
-  display: block;
+#header #link {
   float: right;
 }
 
 #header button {
-  display: block;
-  float: right;
   background-color: red;
   position: relative;
   bottom: 10px;
-  padding: 10px 40px;
-  margin-right: 35px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  margin-top: 15px;
+  border: none;
+  font-size: 20px;
+  width: 150px;
 }
 
+#header button:nth-child(2) {
+  background-color: black;
+}
+
+#header .logout {
+  background-color: #383838;
+}
 
 #article {
-  /* border: 1px solid #fff; */
   display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
 }
 
 #article div {
   /* border: 1px solid white; */
-  width: 450px;
+  width: 30%;
   height: 600px;
   border-radius: 20px;
   text-align: center;
-  flex: 1;
+  /* flex: 1; */
   margin: 20px;
   background-color: rgb(64, 62, 62);
   transition: 0.35s;
+  font-size: 30px;
 }
 
 #article a {
@@ -85,4 +89,17 @@ button {
 
 #article div:hover {
   background-color: rgb(177, 172, 172);
+}
+
+footer {
+  height: 150px;
+  border-top: 1px solid #383838;
+  color: white;
+}
+
+footer p {
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
 }

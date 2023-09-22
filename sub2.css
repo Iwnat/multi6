@@ -1,64 +1,99 @@
 /* 전체 페이지 스타일 */
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: black;
   color: white;
-  margin: 0;
-  padding: 0;
+}
+
+/* 상단 네비게이션 바 스타일 */
+.navbar {
+  float: right;
+  background-color: black;
+  padding: 20px;
+  text-align: right;
+  margin-top: 35px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 50px;
+}
+
+
+/* 가로줄 스타일 */
+.divider {
+  background-color: red;
+  height: 2px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* 컨테이너 스타일 */
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: red;
+  font-size: 50px;
+}
+
+.container h2 {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+/* 섹션 타이틀 스타일 */
+.section-title {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  /* 텍스트를 중앙 정렬 */
+  letter-spacing: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.section-title a {
+  margin-inline: 150px;
+
+}
+
+/* 섹션 링크 스타일 */
+.section-link {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  /* 텍스트를 중앙 정렬 */
+
+}
+
+.section-link:hover {
+  color: red;
 }
 
 /* 컨테이너 스타일 */
 #container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px;
-}
+  padding-bottom: 100px;
 
-/* 헤더 스타일 */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-/* 로고 스타일 */
-#logo {
-  text-decoration: none;
-  color: white;
-  font-size: 28px;
-}
-
-/* 로그아웃 및 마이페이지 버튼 스타일 */
-#logout, #mypage {
-  background-color: gray;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-#menu nav ul {
-  list-style-type: none;
-  padding: 10;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  border-bottom: 1px solid red;
-}
-
-#menu nav ul li:hover a h3 {
-  color: red;
-}
-
-#menu nav ul li h3 {
-  margin-right: 105px;
-  color: gray;
-}
-
-#menu nav ul li:last-child {
-  margin-right: 0;
 }
 
 /* 제목 및 검색 버튼 스타일 */
@@ -68,7 +103,7 @@ h2 {
 
 button {
   background-color: gray;
-  color: white; 
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -77,15 +112,23 @@ button {
 /* 영화 정보 스타일 */
 #content {
   padding: 20px 0;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
   background-color: rgb(77, 75, 75);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
+}
+
+#content #Info {
+  padding-left: 20px;
 }
 
 #movieNm {
   font-weight: bold;
 }
 
-#director, #peopleNm {
+#director,
+#peopleNm {
   margin-top: 5px;
 }
 
@@ -93,17 +136,34 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-#title h2 {
+#title h3 {
   margin-right: 40px;
   color: red;
+  font-size: 30px;
+  margin-bottom: 100px;
+
 }
 
 #title button {
   background-color: black;
 }
 
-a {
-  text-decoration: none;
+
+
+
+
+footer {
+  height: 150px;
+  border-top: 1px solid #383838;
+  color: white;
+}
+
+footer p {
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
 }
