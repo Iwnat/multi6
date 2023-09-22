@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 목록</title>
-  <link rel="stylesheet" href="./sub2.css">
-  <script type="module" src="sub2.js" defer></script>
-</head>
-<body>
-  <div id="container">
-    <header>
-      <a href="main2.html"><h1 id="logo">로고</h1></a>
-      <div>
-        <a href="main1.html"><button id="logout">로그아웃</button></a>
-        <a href="mypage.html"><button id="mypage">마이페이지</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 목록</title>
+    <link rel="stylesheet" href="./sub2.css" />
+    <script type="module" src="sub2.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/aece0ebf47.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- 로고 -->
+    <div class="logo">
+      <h1>
+        <a href="main2.html"
+          ><i class="fa-solid fa-clapperboard" style="color: #ff0000"></i
+        ></a>
+      </h1>
+    </div>
+
+    <!-- 상단 네비게이션 바 -->
+    <div class="navbar">
+      <a href="main1.html">로그아웃</a>
+      <a href="mypage.html">마이페이지</a>
+    </div>
+
+    <div class="section-title">
+      <a href="sub1.html" class="section-link">일별 박스오피스</a>
+      <a href="sub2.html" class="section-link">영화목록</a>
+      <a href="#" class="section-link">예매</a>
+    </div>
+
+    <!-- 가로줄 -->
+    <div class="divider"></div>
+
+    <div id="container">
+      <div id="title">
+        <h3>영화 목록</h3>
+        <button>검색</button>
       </div>
-    </header>
-    <div id="menu">
-      <nav>
-        <ul>
-          <li><a href="sub1.html"><h3>일별 박스 오피스</h3></a></li>
-          <li><a href="sub2.html"><h3>영화 목록</h3></a></li>
-          <li><h3>예매</h3></li>
-        </ul>
-      </nav>
-    </div>
-    <div id="title">
-      <h3>영화 목록</h3>
-      <button>검색</button>
-    </div>
-    <div id="content">
-      <div id="Info">
+      <div id="content">
+        <div id="Info"></div>
       </div>
     </div>
-  </div>
-</body>
+    <div>
+      <footer>
+        <p>6조 미니프로젝트 입니다.</p>
+        <p>팀장: 전숭구 | 팀원: 김장훈, 박준희, 이제형, 이진경</p>
+      </footer>
+    </div>
+  </body>
 </html>
