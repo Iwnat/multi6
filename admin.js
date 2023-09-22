@@ -1,10 +1,12 @@
+// 가입 확인(유효성 검사)
 function joinform_check() {
   var id = document.getElementById("_id");
   var pw = document.getElementById("_pw");
   var pwCheck = document.getElementById("_pwCheck");
   var name = document.getElementById("_name");
   var phone = document.getElementById("_hp");
-  var email = document.getElementById("_email");
+  // //비밀번호 영문자+숫자+특수조합(8~25자리 입력) 정규식
+  var pwdCheck2 = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
 
   if (id.value == "") {
     alert("아이디를 입력하세요.");
@@ -17,16 +19,11 @@ function joinform_check() {
     pwd.focus();
     return false;
   }
-
-  //비밀번호 영문자+숫자+특수조합(8~25자리 입력) 정규식
-  var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
-
-  if (!pwCheck.test(pw.value)) {
+  if (!pwdCheck2.test(pw.value)) {
     alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
     pw.focus();
     return false;
   }
-
   if (pwCheck.value !== pw.value) {
     alert("비밀번호가 일치하지 않습니다..");
     pwCheck.focus();
@@ -47,12 +44,8 @@ function joinform_check() {
     return false;
   }
 
-  if (email_id.value == "") {
-    alert("이메일 주소를 입력하세요.");
-    email_id.focus();
-    return false;
-  }
   document.join.submit();
+  location.replace("/login.html");
 }
 
 //아이디 중복체크 팝업창(현재 공백문서)

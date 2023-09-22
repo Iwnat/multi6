@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   background: black;
+  box-sizing: border-box;
 }
 
 #wrap {
@@ -26,6 +27,7 @@ a {
   margin: 50px;
   padding-left: 10px;
   border-bottom: 1px solid #383838;
+  height: 100px;
 }
 
 
@@ -40,8 +42,9 @@ a {
 
 /* join 작성부분 */
 #wrap #join {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
+  margin-bottom: 100px;
   padding: 50px;
   color: white;
   border: 1px solid #eee;
@@ -124,4 +127,18 @@ span {
 
 .signUp button:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+
+}
+
+footer {
+  height: 150px;
+  border-top: 1px solid #383838;
+  color: white;
+}
+
+footer p {
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
 }
