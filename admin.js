@@ -19,11 +19,13 @@ function joinform_check() {
     pwd.focus();
     return false;
   }
+
   if (!pwdCheck2.test(pw.value)) {
     alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
     pw.focus();
     return false;
   }
+
   if (pwCheck.value !== pw.value) {
     alert("비밀번호가 일치하지 않습니다..");
     pwCheck.focus();
@@ -52,7 +54,7 @@ function joinform_check() {
 function id_check() {
   //window.open("팝업될 문서 경로", "팝업될 문서 이름", "옵션");
   window.open(
-    "",
+    "id_check.html",
     "아이디 중복확인",
     "width=600, height=300, left=300, top=100"
   );
