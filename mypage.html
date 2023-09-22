@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./mypage.css">
+    <link rel="stylesheet" href="/mypage.css">
+    <script src="/mypage.js"></script>
     <title>회원정보 수정</title>
 </head>
 
 <body>
     <div class="logo">
-        <div class="logo"><h1 style="font-size: 30px;"><a href="#"></a></h1>Logo</div>
+        <div class="logo"><h1 style="font-size: 30px;"><a href="main1.html"></h1>Logo</a></div>
 
     <div class="title">
         <div class="title"><h1 style="font-size: 21px;">MYPAGE</h1></div>
@@ -39,8 +40,8 @@
         </div>
     </div>
         <div class="signUp">
-            <button id="signUpButton" value="signUpCheck()">회원정보 수정</button>
-            <button id="WithdrawButton" val="Withdraw()">회원탈퇴</button>
+            <button id="signUpButton" onclick="showPopup()">회원정보 수정</button>
+            <button id="WithdrawButton" onclick="showPopup2()">회원탈퇴</button>
         </div>  
 </body>
 
