@@ -1,3 +1,14 @@
+//API 예제코드. 참고용.
+fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=16aabfb75dea296dfae9b01906442545&targetDt=20230901')
+    .then(response => response.json())
+    .then(data => {
+        // 데이터를 처리하는 코드를 여기에 추가합니다.
+        // 데이터를 처리하는 코드를 여기에 추가
+        console.log(data); // 가져온 데이터를 콘솔에 출력
+    })
+    .catch(error => {
+        console.error('API 호출 오류:', error);
+    });
 
 // API를 호출하여 영화 정보를 가져오는 함수
 fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=16aabfb75dea296dfae9b01906442545&targetDt=20230901')
@@ -19,8 +30,8 @@ fetch('http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxO
             posterImage.src = getPosterImageUrl(index); // 포스터 이미지의 URL을 얻어옴
 
             // 포스터 이미지 크기 조절
-            posterImage.width = 400;
-            posterImage.height = 450;
+            posterImage.width = 550;
+            posterImage.height = 650;
 
             // 영화 정보를 HTML에 삽입
             boxOfficeItem.appendChild(posterImage); // 포스터 이미지를 div에 추가
